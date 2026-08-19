@@ -1,0 +1,34 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+
+\pagestyle{empty}
+
+\begin{document}
+% @author  Luis Carrillo Gutiérrez
+% @desc	   O letter shape in TIKZ
+\begin{figure}
+	\centering
+	\resizebox{\columnwidth}{!}{
+		\begin{tikzpicture}
+			\draw[help lines,step=1cm] (-2,-1) grid (2,5);
+			
+			\begin{scope}[line width=1.3]
+			\draw (-1, 0) -- (-.5, 0) -- (-.5, 1) -- (-1, 1) -- (-1, 1.5) -- (-1, 2.5) -- (-1, 3) -- (-.5,3) -- (-.5, 4) -- (-1, 4);
+			\draw (-2, 1) -- (-2, 3);
+			\draw (1, 0) -- (0, 0) -- (0, 1) -- (1, 1) -- (1, 3) -- (0, 3) -- (0, 4) -- (1, 4);
+			\draw (2, 1) -- (2, 3);
+			\draw (1, 4) arc (90:0:1);
+			\draw (1, 0) arc (-90:0:1);
+			\draw (-1, 4) arc (90:180:1);
+			\draw (-2, 1) arc (180:270:1);
+			\end{scope}
+		\end{tikzpicture}
+	}
+\end{figure}
+\end{document}
