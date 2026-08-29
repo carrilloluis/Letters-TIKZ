@@ -1,0 +1,32 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+
+\pagestyle{empty}
+
+\begin{document}
+% @author  Luis Carrillo Gutiérrez
+% @desc	   Z letter shape in TIKZ
+\begin{figure}
+	\centering
+	\resizebox{\columnwidth}{!}{
+		\begin{tikzpicture}
+			\draw[help lines,step=1cm] (-2,-1) grid (2,5);
+			
+			\begin{scope}[line width=1.3]
+			\draw (-2, 4) -- (-2, 3) -- (-.5, 3) -- (0.5, 4) -- cycle;
+			\draw (2, 0) -- (-.5, 0) -- (.5, 1) -- (2, 1) -- cycle;
+			\draw (1, 4) -- (-2, 1);
+			\draw (-1, 0) -- (2, 3);
+			\draw (1, 4) arc (90:0:1);
+			\draw (-2, 1) arc (180:270:1);
+			\end{scope}
+		\end{tikzpicture}
+	}
+\end{figure}
+\end{document}
